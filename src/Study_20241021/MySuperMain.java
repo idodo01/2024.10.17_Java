@@ -21,9 +21,9 @@ class MyParent extends Object{
 class MyChild extends MyParent{
     int pNum = 40;
     MyChild(){
-        super(50);
+        super(50); // 1. 부모인 MyParent 생성자에 값 50을 넘긴다
         System.out.println("MyChild 생성");
-        System.out.println(super.pNum);
+        System.out.println(super.pNum); // 2. super.pNum의 값은 50
     }
 
     @Override
@@ -34,7 +34,7 @@ class MyChild extends MyParent{
 
     @Override
     public String toString() {
-        return "ㅋㅋㅋㅋ";
+        return "MyChild의 toString입니다~~~";
     }
 }
 

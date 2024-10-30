@@ -12,7 +12,7 @@ interface Electronic{
 // 일반 클래스내에 추상 클래스 사용은 불가능
 // 따라서, 추상 메서드를 사용하기 위해서는 추상 클래스 필요~!
 
-// 추상 클래스
+// 인터페이스를 상속한, 추상 클래스
 abstract class Computer implements Electronic{
     String a;
     // 추상메서드
@@ -23,10 +23,10 @@ abstract class Computer implements Electronic{
     }
     
     // 인터페이스 메서드는 무조건 오버라이딩
-//    @Override
-//    public void getVolt() {
-//
-//    }
+    @Override
+    public void getVolt() {
+
+    }
 }
 class AppleComputer extends Computer{
     @Override
@@ -36,6 +36,9 @@ class AppleComputer extends Computer{
     
     // Computer클래스에서 오버라이딩 안하면
     // 여기 오버라이딩해도 됨
+
+    // 결국엔 어디에서든 한 곳에서는
+    // 꼭 인터페이스의 메서드를 오버라이딩해야한다는 것
     @Override
     public void getVolt() {
 

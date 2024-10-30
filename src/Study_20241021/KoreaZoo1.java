@@ -26,9 +26,9 @@ class Zebra extends Animal{
 
 class ZooKeeper {
     
-    // 1. 메서드 오버로딩 하는 방식
+    // 메서드 오버로딩 하는 방식
     // => 동물이 1000마리 생기면, 메서드도 1000 만들어야하는 문제점
-    // => 다형성 이용
+    // => 다형성 이용 (KoreaZoo2.java)
     void feed(Lion lion){ // 먹이 주기 기능
         System.out.println(lion + "에게 먹이 주기");
     }
@@ -42,9 +42,11 @@ public class KoreaZoo1 {
     public static void main(String[] args) {
         ZooKeeper mikey = new ZooKeeper();
         Lion lion1 = new Lion("사돌이");
-        Zebra zebra = new Zebra("얼룩이");
+        Zebra zebra1 = new Zebra("얼룩이");
         mikey.feed(lion1); // 밥주자~
-        mikey.feed(zebra); // 밥주자~
+        mikey.feed(zebra1); // 밥주자~
+
+
     }
 }
 

@@ -16,6 +16,7 @@ public class ExceptionMain2 {
         try { // 4. try-catch문 으로 오류 처리
             m1();
         } catch (Throwable e) {
+            System.out.println("오류가 발생했어요!!");
         }
 
     }
