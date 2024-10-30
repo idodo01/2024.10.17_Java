@@ -15,36 +15,36 @@ class Board{
     }
 
     String status1(int number){
-        System.out.println("현재 상태를 측정합니다..");
-        return number == 1 ? "정상" : "비정상";
+//        System.out.println("현재 상태를 측정합니다..");
+        return number == 1 ? "status1 정상" : "status1 비정상";
     }
 
     String status2(int number1, int number2){
-        System.out.println("현재 상태를 측정합니다..");
+//        System.out.println("현재 상태를 측정합니다..");
         if (number1 > 0 && number2 > 0){
-            return "정상";
+            return "status2 정상";
         }
-        return "비정상";
+        return "status2 비정상";
     }
 
     String status3(int[] numbers){
-        System.out.println("현재 상태를 측정합니다..");
+//        System.out.println("현재 상태를 측정합니다..");
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] < 0) {
-                return "비정상";
+                return "status3 비정상";
             }
         }
-        return "정상";
+        return "status3 정상";
     }
 
     String status4(int... numbers){
-        System.out.println("현재 상태를 측정합니다..");
+//        System.out.println("현재 상태를 측정합니다..");
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] < 0) {
-                return "비정상";
+                return "status4 비정상";
             }
         }
-        return "정상";
+        return "status4 정상";
     }
 
 }
@@ -62,23 +62,21 @@ public class MyFirstClass {
         board1.print_data(0); // 메서드를 호출한다
 
         // status1, status2
-        board1.status1(1);
-        board1.status2(1,2);
+        System.out.println(board1.status1(1));
+        System.out.println(board1.status2(1,2));
 
         // status3
         int[] numbers = new int[]{ 1, 2, 3, 4 };
-        String stat = board1.status3(numbers); // 실행 후에 "정상"이 반환된다
+        String stat = board1.status3(numbers); // 실행 후에 "status3 정상"이 반환된다
         System.out.println(stat);
 
         // status4
-        String stat2 = board1.status4(new int[]{ 1, 2, 3, 4 }); // 실행 후에 "정상"이 반환된다
+        String stat2 = board1.status4(new int[]{ 1, 2, 3, 4 }); // 실행 후에 "status4 정상"이 반환된다
         System.out.println(stat2);
 
-        // 꼭 배열로 전달안해도 됨
+        // status4에서 꼭 배열로 전달안해도 됨
         String stat3 = board1.status4(0, 1);
         System.out.println(stat3);
-
-
 
 //        Board board2 = new Board();
 //        board2.no = 2;
@@ -93,8 +91,9 @@ public class MyFirstClass {
 
         String message = "This it Python";
         // String message = new String("This it Python");
-        // String 객체에서 메서드를 호출했다
-        String newMessage = message.toUpperCase();
+
+        // String 객체(message)에서 메서드(toUpperCase)를 호출했다
+        String newMessage = message.toUpperCase(); // 모두 대문자
         System.out.println(newMessage);
         /**************************************/
 

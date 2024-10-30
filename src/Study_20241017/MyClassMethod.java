@@ -14,13 +14,15 @@ public class MyClassMethod {
     public static void main(String[] args) {
         iPhone iPhone14 = new iPhone();
         iPhone14.기종 = "iPhone14";
-        iPhone.turn_on();
-        System.out.println(iPhone.제조사);
+        iPhone.turn_on(); // 객체로 바로 접근
+        System.out.println(iPhone.제조사); // 객체로 바로 접근
         System.out.println(iPhone14.기종);
 
         iPhone iPhone15 = new iPhone();
         iPhone15.기종 = "iPhone15";
-        iPhone.turn_on();
+        iPhone.turn_on(); // 객체로 바로 접근
+        System.out.println(iPhone.제조사); // 객체로 바로 접근
+        System.out.println(iPhone15.기종);
 
 
 
