@@ -12,7 +12,7 @@ class Child extends Parent{
         System.out.println("걷는다");
     }
     // 1) Override가 되었다고 명시함으로서, 인식을 쉽게
-    // 2) Override가 제대로 되었는지 체크 가능
+    // 2) Override가 제대로 되었는지 체크 또한 가능함
     @Override
     void run() {
         System.out.println("빨리 달린다!");

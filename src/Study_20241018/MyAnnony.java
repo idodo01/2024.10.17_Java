@@ -33,7 +33,8 @@ public class MyAnnony {
             @Override
             void test() {
 //                num = 300;     //익명 클래스는 외부 변수값을 바꿀 수 없다.
-                System.out.println("ㅋㅋㅋㅋ");
+                System.out.println(num); // 물론, 사용하는 것은 가능하다
+                System.out.println(f);
             }
         };
 

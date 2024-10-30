@@ -19,6 +19,6 @@ public class MyPersons {
         // emily is born
         Person woman = new Person("emily");
         // 전체...
-        System.out.println("전체 인구 수: " + Person.get_population());
+        System.out.println("전체 인구 수: " + Person.get_population()); // static 메서드라서, 객체로 바로 접근
     }
 }

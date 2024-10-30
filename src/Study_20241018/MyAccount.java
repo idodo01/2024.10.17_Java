@@ -10,21 +10,22 @@ class Account{
     private String password; // 계좌 비밀번호
     private int balance; // 잔액
 
-    Account(){
-        this("NONE", "NONE", 100);
-        System.out.println("생성자 실행");
+    Account(){ // 1. 매개변수 1개인 생성자
+        this("NONE", "NONE", 100); // 3번 생성자 실행됨
+        System.out.println("1. 매개변수 1개인 생성자 끝");
         //        this(); 자기자신에서는 작성 불가능, 무한루프
     }
 
-    Account(String no, String password, int balance){
+    Account(String no, String password, int balance){ // 3. 매개변수 3개인 생성자
         this.no = no;
         this.password = password;
         this.balance = balance;
+        System.out.println("3. 매개변수 3개인 생성자 끝");
     }
 
-    Account(String no, String password){
-        this(no, password, 100);
-        System.out.println("계좌번호 / 비밀번호 생성자 실행");
+    Account(String no, String password){ // 2. 매개변수 2개인 생성자
+        this(no, password, 100); // 3번 생성자로 실행됨
+        System.out.println("2. 매개변수 2개인 생성자 끝");
     }
 
 

@@ -5,7 +5,7 @@ class Song {
     String genre;
 
     void set_Song(String _title, String _genre) {
-        title = _title;
+        title = _title; // this.title = title 하는 방식말고, 변수를 다르게 할 때 언더바를 붙여줌
         genre = _genre;
     }
 
@@ -23,13 +23,13 @@ class Singer {
     void set_Singer(String _name) {
         name = _name;
     }
-    void hit_Song(Song _song) {
+    void hit_Song(Song _song) { // 1. Song 객체를 받아서
         song = _song;
     }
 
     void print_singer() {
         System.out.println("가수이름: "+name);
-        song.print_song();
+        song.print_song(); // 2. Song의 메서드를 사용할 수 있게 됨
     }
 
 }
