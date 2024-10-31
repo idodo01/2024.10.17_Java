@@ -12,10 +12,12 @@ public class MyDateTime {
     static String what_day_is_it(int a, int b){
 
         LocalDate newDate = LocalDate.of(2016, a, b);
-//        System.out.println(newDate.getDayOfWeek()); // toString으로 되어있구나 확인가능
-        String DayOfWeek = newDate.getDayOfWeek().toString();
 
-        return DayOfWeek.substring(0,3); // index 0부터 3까지
+        // toString 기능이 있구나 확인가능
+//        System.out.println("newDate.getDayOfWeek(): "+newDate.getDayOfWeek());
+
+        String DayOfWeek = newDate.getDayOfWeek().toString();
+        return DayOfWeek.substring(0,3); // index 0부터 2(3-1)까지, TUESDAY은 TUE로
     }
 
     public static void main(String[] args) {
@@ -23,40 +25,45 @@ public class MyDateTime {
         System.out.println(result); // TUE
 
         result = what_day_is_it(8, 10);
-        System.out.println(result); // ??
+        System.out.println(result); // WED
 
         result = what_day_is_it(2, 4);
-        System.out.println(result); // ??
+        System.out.println(result); // THU
 
+        System.out.println("=============================");
 
-
-
-////////////////////////////////////////////////
         Date date = new Date();
         System.out.println(date);
 
         LocalDate localDate = LocalDate.now();
         System.out.println(localDate);
 
-        ////////////////////////////////////////
+        System.out.println("=============================");
+
         LocalTime localTime = LocalTime.now();
         System.out.println(localTime);
 
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println(localDateTime);
 
-
+        System.out.println("=============================");
         LocalDate newDate = LocalDate.of(2024, 4, 11);
-        newDate.plusDays(50);
-        System.out.println("요일"+newDate.getDayOfWeek());
+        newDate.plusDays(50); // 50일 추가
+        System.out.println("50일 추가된 날짜의 요일은? :"+newDate.getDayOfWeek());
 
+        System.out.println("=============================");
         LocalTime newTime1 = LocalTime.of(22, 10);
         LocalTime newTime2 = LocalTime.of(23, 59, 59);
         LocalTime newTime3 = LocalTime.of(23, 59, 59, 8555);
+        System.out.println(newTime1);
+        System.out.println(newTime2);
+        System.out.println(newTime3);
 
+        System.out.println("=============================");
         LocalDateTime newDateTime1 = LocalDateTime.of(2024, 4, 11, 23, 59);
+        System.out.println(newDateTime1);
         LocalDateTime newDateTime2 = LocalDateTime.of(2024, 4, 11, 23, 59, 59);
-
+        System.out.println(newDateTime2);
 
 
 

@@ -12,7 +12,7 @@ public class MyLamdbaMain3 {
         Sum sum2 = System.out::println;
 
         sum1.calc(5);
-        sum1.calc(10);
+        sum2.calc(10);
     }
 }
 

@@ -25,23 +25,30 @@ public class MyEnumMain {
 
         switch (c2.name){
             case "식품":
+                System.out.println("식품입니다~~~");
                 break;
             case "장난감":
+                System.out.println("장난감입니다~~~");
                 break;
             case "문구":
+                System.out.println("문구입니다~~~");
                 break;
         }
 
+        /////////////////////////////////////////////////
         // 2. ENUM 사용
         CATEGORY_ENUM ce1 = CATEGORY_ENUM.식품;
         CATEGORY_ENUM ce2 = CATEGORY_ENUM.장난감;
         CATEGORY_ENUM ce3 = CATEGORY_ENUM.문구;
         switch (ce2){
-            case 문구:
+            case 식품:
+                System.out.println("식품입니다~~~");
                 break;
             case 장난감:
+                System.out.println("장난감입니다~~~");
                 break;
-            case 식품:
+            case 문구:
+                System.out.println("문구입니다~~~");
                 break;
         }
 

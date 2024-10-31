@@ -23,11 +23,8 @@ public class MyLamdbaMain2 {
         calc1.calc();
 
 
-        // 람다식은
-        // 클래스가 아닌 인터페이스일 때 사용가능
-        
-        // 그리고 메서드가 하나밖에 없기 때문에,
-        // 람다식으로 가능한 것
+        // 인터페이스가 메서드가 하나밖에 없기 때문에, (클래스는 안됨)
+        // 람다식으로도 표현할 수 있다
         Calculator2 newCalc =
                 () -> {
                     System.out.println("새 calc22");
