@@ -21,7 +21,7 @@ class Person implements Comparable<Person> {
         return this.age - o.age; // 정렬됨
 
 //        if(this.age > o.age){
-//            return 1; // 양수이기만 하면 됨, 내 나이가 더 크면 뒤로 간다
+//            return 1; // 양수이기만 하면 됨, 내 나이가 더 크면 뒤로 간다, 오름차순
 //        }
 //        else if(this.age < o.age){
 //            return -1;
@@ -37,13 +37,15 @@ public class MyCompareMain2 {
         Person p2 = new Person("이", 15);
         Person p3 = new Person("박", 20);
         Person p4 = new Person("최", 8);
+        
+        // 오름차순
         ArrayList<Person> persons = new ArrayList<>();
         persons.add(p1);
         persons.add(p2);
         persons.add(p3);
         persons.add(p4);
         persons.sort(null);
-        System.out.println(persons); // 1. 정렬 안됨 -> Comparable 필요
+        System.out.println(persons); // 1. Comparable 사용하여 정렬이 됨
 
 
 

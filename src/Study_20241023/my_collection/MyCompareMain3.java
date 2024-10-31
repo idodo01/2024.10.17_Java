@@ -28,13 +28,15 @@ public class MyCompareMain3 {
         Fruits f2 = new Fruits(15);
         Fruits f3 = new Fruits(20);
         Fruits f4 = new Fruits(8);
+
         ArrayList<Fruits> fruits = new ArrayList<>();
         Judgement judgement = new Judgement();
+
         fruits.add(f1);
         fruits.add(f2);
         fruits.add(f3);
         fruits.add(f4);
-        fruits.sort(judgement); // 1. 정렬 안됨 -> judgement를 통해서 정렬
+        fruits.sort(judgement); // 1.judgement를 통해서 정렬, sort에 null 대신 판사가 들어간 것
         System.out.println(fruits);
 
 

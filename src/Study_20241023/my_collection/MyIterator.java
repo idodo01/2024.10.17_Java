@@ -10,7 +10,7 @@ public class MyIterator {
         List<Integer> list = List.of(1,2,3);
 
         // 3.
-        // Iterator
+        // Iterator(이터레이터): 컬렉션 요소 순회 접근
         Iterator<Integer> iter = list.iterator();
         // 가져올 다음 요소가 있다면
         while(iter.hasNext()) {

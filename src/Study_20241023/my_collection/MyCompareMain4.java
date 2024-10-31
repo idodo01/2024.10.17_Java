@@ -25,12 +25,12 @@ class Fruits1 {
 class Judgement1 implements Comparator {
     @Override
     public int compare(Object o1, Object o2) {
-        if(o1 instanceof Fruits && o2 instanceof Fruits) {
+        if(o1 instanceof Fruits && o2 instanceof Fruits) { // 비교하는 객체가 둘다 Fruits일 때
             Fruits f1 = (Fruits) o1;
             Fruits f2 = (Fruits) o2;
             return f1.price - f2.price;
         }
-        else if(o1 instanceof Person && o2 instanceof Person) {
+        else if(o1 instanceof Person && o2 instanceof Person) { // 비교하는 객체가 둘다 Person일 때
             Person p1 = (Person) o1;
             Person p2 = (Person) o2;
             return p1.age - p2.age;
@@ -55,8 +55,9 @@ public class MyCompareMain4 {
         persons1.add(p4);
         persons1.sort(judgement1);
         System.out.println(persons1);
-        /***************************************************/
+
         System.out.println("*************************************************/");
+
         Fruits1 f1 = new Fruits1(10);
         Fruits1 f2 = new Fruits1(15);
         Fruits1 f3 = new Fruits1(20);
