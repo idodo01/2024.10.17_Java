@@ -2,6 +2,8 @@ package Study_20241128;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.util.Arrays;
 
 public class MyFileIOMain {
     public static void directory_file_list() {
@@ -23,18 +25,27 @@ public class MyFileIOMain {
     public static void read_btye() {
         try {
             FileInputStream in = new FileInputStream("my.txt");
+            // 1)
 //            int data = in.read();
 //            System.out.println((char)data);
 //            data = in.read(); // 다음 byte를 읽음
 //            System.out.println((char)data);
 
-            while (true) {
-                int data = in.read(); // 1 바이트 읽고, 다음 반복문에 또 다음 바이트 읽음
-                if (data == -1) {
-                    break;
-                }
-            System.out.println((char)data);
-            }
+            // 2)
+//            while (true) {
+//                int data = in.read(); // 1 바이트 읽고, 다음 반복문에 또 다음 바이트 읽음
+//                if (data == -1) {
+//                    break;
+//                }
+//            System.out.println((char)data);
+//            }
+//            in.close(); // 읽고 닫아주어야함
+
+            // 3)
+            byte[] data = in.readAllBytes();
+            System.out.println(new String(data));
+            System.out.println(Arrays.toString(data));
+
             in.close(); // 읽고 닫아주어야함
 
         } catch (Exception e) {
@@ -42,6 +53,34 @@ public class MyFileIOMain {
         }
     }
 
+    public static void write_byte() {
+        try {
+            FileOutputStream out = new FileOutputStream("cfgjjfg.txt");
+            String word = "Hello python!";
+            byte[] chars = word.getBytes();
+            out.write(chars);
+            out.close();
+        }catch (Exception e){
+            System.out.println("파일 없음!!");
+        }
+    }
+
+    public static void copy_paste() {
+        try {
+            File ori = new File("1.jpg");
+            File copied = new File("copy.jpg");
+
+            FileInputStream fis = new FileInputStream(ori);
+            FileOutputStream fos = new FileOutputStream(copied);
+
+            byte[] data = fis.readAllBytes();
+            fos.write(data);
+
+            fos.close();
+            fis.close();
+        } catch(Exception e) {}
+
+    }
     public static void main(String[] args) {
         // 1.
 //        File file = new File("my.txt");
@@ -60,6 +99,12 @@ public class MyFileIOMain {
 //        directory_file_list();
 
         // 3.
-        read_btye();
+//        read_btye();
+
+        // 4.
+//        write_byte();
+
+        // 5.
+        copy_paste();
     }
 }
